@@ -13,6 +13,8 @@ Usage
 * wrap user content in an HTML element with the class "user-content"
 * watch the magic happen
 
-<div class="user-content">
-...
-</div>
+```<div class="user-content"> <!-- unkown html goes here --> </div>```
+
+Demo
+-------------
+https://github.com/apticknor/user-content/tree/master/demo
