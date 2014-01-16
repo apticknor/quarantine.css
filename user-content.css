@@ -199,7 +199,8 @@ user-content computer output
 .user-content pre {
     margin: 0 0 12px 0;
     font-family: "Lucida Console", Monaco, monospace;
-    white-space: normal;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 .user-content code,
