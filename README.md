@@ -13,7 +13,7 @@ Usage
 * wrap user content in an HTML element with the class "user-content"
 * watch the magic happen
 
-```<div class="user-content"> <!-- unkown html goes here --> </div>```
+```<div class="user-content"> <!-- unknown html goes here --> </div>```
 
 Demo
 -------------
