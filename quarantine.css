@@ -45,6 +45,7 @@
 
  * All media set to max-width 100% to prevent it from overflowing the container
  1. !important to override inheritance from ancestors
+ 2. If a piece of media does not have a container, add margin below it to keep the flow intact
 ========================================================================== */
 .quarantineContent img,
 .quarantineContent iframe,
@@ -55,6 +56,19 @@
 .quarantineContent canvas,
 .quarantineContent picture {
     max-width: 100% !important; /* 1 */
+}
+
+/* 2 */
+.quarantineContent > img,
+.quarantineContent > iframe,
+.quarantineContent > embed,
+.quarantineContent > object,
+.quarantineContent > video,
+.quarantineContent > audio,
+.quarantineContent > canvas,
+.quarantineContent > picture {
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
 /*
