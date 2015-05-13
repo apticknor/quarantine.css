@@ -1,0 +1,9 @@
+{
+  "name": "quarantine-css",
+  "version": "0.2.0",
+  "main": "quarantine.css",
+  "author": "Anthony Ticknor",
+  "homepage": "https://github.com/apticknor/quarantine.css",
+  "description": "A customizable micro library that provides predictability in your styles when user-authored HTML is added to a page.",
+  "license": "MIT"
+}
