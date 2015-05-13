@@ -14,6 +14,11 @@ Include the stylesheet on your document's `<head>`
 ```html
 <link rel="stylesheet" href="quarantine.css">
 ```
+or import the SASS file.
+
+```css
+@import "quarantine.scss";
+```
 
 Isolate the area where user-authored content will appear with a `<div>` that has a class of `quarantineContent`.
 
