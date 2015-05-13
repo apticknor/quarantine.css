@@ -1,0 +1,120 @@
+/*
+ Reset - thanks Eric Meyer
+========================================================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, main, picture {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    overflow-y: scroll; /* Always show a vertical scrollbar, even when there is no scrolling */
+    -webkit-text-size-adjust: 100%;
+       -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+
+img, audio, video, picture,
+canvas, iframe, embed {
+    max-width: 100% !important;
+}
+
+/*
+ HTML5 Elements
+========================================================================== */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+
+audio, canvas, video, progress, picture {
+    display: inline-block;
+}
+
+template {
+    display: none;
+}
+
+/*
+ Base
+========================================================================== */
+body {
+    background-color: #f2f2f2;
+    color: #181818;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+a {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+/*
+ Wrapper
+
+ 1. Center the wrapper in the viewport when above max-width
+ 2. Don't let the wrapper touch the edge of the viewport
+========================================================================== */
+.wrapper {
+    max-width: 960px;
+    min-width: 200px;
+    margin: 0 auto; /* 1 */
+    padding: 0 20px; /* 2 */
+}
+
+/*
+ Slab
+
+ 1. Push contents away from the top and bottom of the container
+========================================================================== */
+.slab {
+    padding: 40px 0; /* 1 */
+}
