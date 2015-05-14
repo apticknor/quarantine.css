@@ -22,7 +22,6 @@
   "license": "MIT",
   "ignore": [
     ".gitignore",
-    "bower.json",
-    "demo/*"
+    "demo"
   ]
 }
