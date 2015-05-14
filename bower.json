@@ -1,7 +1,21 @@
 {
   "name": "quarantine-css",
   "version": "0.2.2",
-  "main": "quarantine.css",
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "user content",
+    "content",
+    "usercontent",
+    "quarantine",
+    "wysiwyg",
+    "contextual"
+  ],
+  "main": [
+    "quarantine.scss",
+    "quarantine.css"
+  ],
   "author": "Anthony Ticknor",
   "homepage": "https://github.com/apticknor/quarantine.css",
   "description": "A customizable micro library that provides predictability in your styles when user-authored HTML is added to a page.",
