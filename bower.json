@@ -1,6 +1,6 @@
 {
   "name": "quarantine-css",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "keywords": [
     "css",
     "scss",
@@ -21,6 +21,7 @@
   "description": "A customizable micro library that provides predictability in your styles when user-authored HTML is added to a page.",
   "license": "MIT",
   "ignore": [
-    ".gitignore"
+    ".gitignore",
+    "demo/"
   ]
 }
