@@ -21,7 +21,6 @@
   "description": "A customizable micro library that provides predictability in your styles when user-authored HTML is added to a page.",
   "license": "MIT",
   "ignore": [
-    ".gitignore",
-    "demo/"
+    ".gitignore"
   ]
 }
