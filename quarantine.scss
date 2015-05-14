@@ -1,0 +1,455 @@
+/* quarantine.css | MIT License | github.com/apticknor/quarantine.css */
+
+/*
+ SASS Variable Configuration
+
+ * Configure the variables to create the quarantine styles you desire
+========================================================================== */
+$quarantine-VERTICAL_RHTYHM_DEFAULT: 1rem;
+$quarantine-VERTICAL_RHTYHM_LOOSE: 1.7rem;
+
+/*
+ Clearfix
+
+ * Always clear unknown content as it may contain a float
+========================================================================== */
+.quarantineContent:before,
+.quarantineContent:after {
+    content: " ";
+    display: table;
+}
+
+.quarantineContent:after {
+    clear: both;
+}
+
+/*
+ Baseline
+
+ 1. Set the container to inherit basic styles from it's parent
+ 2. Make sure long words line break appropriately
+ 3. Remove excess margin from the first and last child and use !important to override inheritance from ancestors
+========================================================================== */
+.quarantineContent {
+    color: inherit; /* 1 */
+    font-family: inherit;  /* 1 */
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    -ms-word-wrap: break-word; /* 2 */
+        word-wrap: break-word; /* 2 */
+}
+
+.quarantineContent > *:first-child {
+    margin-top: 0 !important; /* 3 */
+}
+
+.quarantineContent > *:last-child {
+    margin-bottom: 0 !important; /* 3 */
+}
+
+/*
+ Embedded Content & Media
+
+ * All media set to max-width 100% to prevent it from overflowing the container
+ 1. !important to override inheritance from ancestors
+ 2. If a piece of media does not have a container, add margin below it to keep the flow intact
+========================================================================== */
+.quarantineContent img,
+.quarantineContent iframe,
+.quarantineContent embed,
+.quarantineContent object,
+.quarantineContent video,
+.quarantineContent audio,
+.quarantineContent canvas,
+.quarantineContent picture {
+    max-width: 100% !important; /* 1 */
+}
+
+/* 2 */
+.quarantineContent > img,
+.quarantineContent > iframe,
+.quarantineContent > embed,
+.quarantineContent > object,
+.quarantineContent > video,
+.quarantineContent > audio,
+.quarantineContent > canvas,
+.quarantineContent > picture {
+    display: inline-block;
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_DEFAULT;
+}
+
+/*
+ Anchors
+========================================================================== */
+.quarantineContent a:link {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+.quarantineContent a:visited {
+
+}
+
+.quarantineContent a:focus,
+.quarantineContent a:hover {
+    color: #0000ff;
+    text-decoration: underline;
+}
+
+.quarantineContent a:active {
+
+}
+
+/*
+ Paragraphs
+========================================================================== */
+.quarantineContent p {
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_DEFAULT;
+}
+
+/*
+ Headings
+
+ 1. Take advantage of margin collapsing to create greater space above a heading
+ 2. Reduce line-height as headings are much larger than body copy
+ 3. Headings should stay the same color as intended and not inherit link styles and use !important to override inheritance from ancestors
+========================================================================== */
+.quarantineContent h1,
+.quarantineContent h2,
+.quarantineContent h3,
+.quarantineContent h4,
+.quarantineContent h5,
+.quarantineContent h6 {
+    margin-top: $quarantine-VERTICAL_RHTYHM_LOOSE; /* 1 */
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_DEFAULT;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 1.2; /* 2 */
+}
+
+.quarantineContent h1 {
+    font-size: 2.25rem;
+}
+
+.quarantineContent h2 {
+    font-size: 1.5rem;
+}
+
+.quarantineContent h3 {
+    font-size: 1.3125rem;
+}
+
+.quarantineContent h4 {
+    font-size: 1.125rem;
+}
+
+.quarantineContent h5 {
+    font-size: 1rem;
+}
+
+.quarantineContent h1 a,
+.quarantineContent h2 a,
+.quarantineContent h3 a,
+.quarantineContent h4 a,
+.quarantineContent h5 a,
+.quarantineContent h6 a {
+    color: inherit !important; /* 3 */
+}
+
+/*
+ Blockquote
+
+ 1. Push content away from the horizontal rule more than the normal spacing
+ 2. Border inherits color from text color
+ 3. Remove bottom margin from last item inside a blockquote
+========================================================================== */
+.quarantineContent blockquote {
+    box-sizing: border-box;
+    margin-top: $quarantine-VERTICAL_RHTYHM_LOOSE; /* 1 */
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_LOOSE; /* 1 */
+    border-left: 5px solid; /* 2 */
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-size: 1.3125rem;
+    font-style: italic;
+}
+
+.quarantineContent blockquote > *:last-child {
+    margin-bottom: 0; /* 3 */
+}
+
+/*
+ Address
+
+ 1. Mimic browser default text style - italics
+========================================================================== */
+.quarantineContent address {
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_DEFAULT;
+    font-style: italic; /* 1 */
+}
+
+/*
+ Horizontal Rule
+
+ 1. Push content away from the horizontal rule than the normal spacing
+ 2. Set an explicit 1px height for the horizontal rule
+ 3. Remove borders for maximum browser support
+ 4. Set the color of the horizontal rule as both color and background-color for maximum browser support
+ 5. Reduce font-size and line-height to keep height from exceeeding 1px
+========================================================================== */
+.quarantineContent hr {
+    margin-top: $quarantine-VERTICAL_RHTYHM_LOOSE; /* 1 */
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_LOOSE; /* 1 */
+    height: 1px; /* 2 */
+    border: none; /* 3 */
+    background: #aaaaaa; /* 4 */
+    color: #aaaaaa; /* 4 */
+    line-height: 1px; /* 5 */
+    font-size: 1px; /* 5 */
+}
+
+/*
+ Inline Text
+
+ * Mimics browsers as close as possible while maintaining cross browser consistency
+ * Includes some invalid legacy elements as they may be added by older WYSIWYG editors
+========================================================================== */
+.quarantineContent strong,
+.quarantineContent b {
+    font-weight: bold;
+}
+
+.quarantineContent em,
+.quarantineContent i {
+    font-style: italic;
+}
+
+.quarantineContent del,
+.quarantineContent strike,
+.quarantineContent s {
+    text-decoration: line-through;
+}
+
+.quarantineContent u,
+.quarantineContent ins {
+    text-decoration: underline;
+}
+
+.quarantineContent sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.quarantineContent sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.quarantineContent big {
+    font-size: larger;
+}
+
+.quarantineContent small {
+    font-size: smaller;
+}
+
+.quarantineContent abbr,
+.quarantineContent acronym {
+    border-bottom: 1px dotted;
+}
+
+.quarantineContent cite,
+.quarantineContent dfn {
+    font-style: italic;
+}
+
+.quarantineContent q {
+    font-style: italic;
+}
+
+.quarantineContent q::before {
+    content: open-quote;
+}
+
+.quarantineContent q::after {
+    content: close-quote;
+}
+
+.quarantineContent q:lang(en) {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.quarantineContent bdo,
+.quarantineContent bdi {
+    direction: rtl;
+}
+
+.quarantineContent blink {
+    text-decoration: blink;
+}
+
+/*
+ Lists
+ 1. Indent lists and leave room for the list item mark
+ 2. Nested lists have no bottom margin
+ 3. Second level nested lists
+ 4. Third level nested lists
+========================================================================== */
+.quarantineContent ul,
+.quarantineContent ol,
+.quarantineContent dl {
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_DEFAULT;
+}
+
+.quarantineContent ul {
+    list-style-type: disc;
+}
+
+.quarantineContent ol {
+    list-style-type: decimal;
+}
+
+.quarantineContent dt {
+    font-weight: bold;
+}
+
+.quarantineContent li,
+.quarantineContent dd {
+    margin-left: $quarantine-VERTICAL_RHTYHM_LOOSE; /* 1 */
+}
+
+/* 2 */
+.quarantineContent ul ul,
+.quarantineContent ul ol,
+.quarantineContent ul dl,
+.quarantineContent ol ul,
+.quarantineContent ol ol,
+.quarantineContent ol dl,
+.quarantineContent dl ul,
+.quarantineContent dl ol,
+.quarantineContent dl dl {
+    margin-bottom: 0;
+}
+
+/* 3 */
+.quarantineContent ol ul,
+.quarantineContent ul ul {
+    list-style-type: circle;
+}
+
+/* 4 */
+.quarantineContent ol ol ul,
+.quarantineContent ol ul ul,
+.quarantineContent ul ol ul,
+.quarantineContent ul ul ul {
+    list-style-type: square;
+}
+
+
+/*
+ Tables
+ 1. Table should never overflow their parent container and will always use 100% of the container and use !important to override inheritance from ancestors
+ 2. Push content away from the horizontal rule more than the normal spacing
+========================================================================== */
+.quarantineContent table {
+    width: 100% !important; /* 1 */
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_LOOSE;  /* 2 */
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.quarantineContent caption {
+    font-size: smaller;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+.quarantineContent tr {
+    vertical-align: middle;
+}
+
+.quarantineContent tbody {
+    vertical-align: middle;
+}
+
+.quarantineContent thead {
+    vertical-align: middle;
+}
+
+.quarantineContent tfoot {
+    vertical-align: middle;
+}
+
+.quarantineContent td {
+    vertical-align: inherit;
+    text-align: left;
+    padding: 4px 12px;
+    border: 1px solid #666666;
+}
+
+.quarantineContent th {
+    vertical-align: inherit;
+    text-align: left;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid #666666;
+    background-color: transparent;
+}
+
+/*
+ Computer Output
+
+ 1. Push content away from the horizontal rule more than the normal spacing
+ 2. `code` styles get reset when `code` is nested inside `pre`
+========================================================================== */
+.quarantineContent pre {
+    margin-top: $quarantine-VERTICAL_RHTYHM_LOOSE; /* 1 */
+    margin-bottom: $quarantine-VERTICAL_RHTYHM_LOOSE; /* 1 */
+    padding: 2rem;
+    border: 1px solid #aaaaaa;
+    background-color: #f8f8f8;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    border-radius: 2px;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.quarantineContent code {
+    display: inline-block;
+    padding: 2px 6px;
+    border: 1px solid #aaaaaa;
+    background-color: #f8f8f8;
+    color: #dd1144;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+.quarantineContent pre code {
+    display: block;
+    padding: 0; /* 2 */
+    background-color: transparent; /* 2 */
+    border: none; /* 2 */
+    font-size: inherit; /* 2 */
+    color: inherit; /* 2 */
+    border-radius: 0; /* 2 */
+}
+
+.quarantineContent code,
+.quarantineContent samp,
+.quarantineContent tt,
+.quarantineContent kbd,
+.quarantineContent var {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.quarantineContent var {
+    font-style: italic;
+}
+
+
+
+
+
+
